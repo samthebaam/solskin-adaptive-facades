@@ -10,30 +10,32 @@ export const Slide05Research = () => (
       Born at <span className="text-slide-gold">ETH Zurich</span>
     </h2>
 
-    <div className="flex gap-16">
-      <div className="flex-1 space-y-8 animate-fade-in-up delay-200">
-        <p className="text-2xl text-slide-gray-100 leading-[1.6]">
-          Research started in <span className="text-slide-gold font-semibold">2014</span>. If a facade should adapt to the environment, it needs to <span className="font-semibold">move</span>.
+    <div className="grid grid-cols-[1.15fr,560px] gap-16 items-start">
+      <div className="space-y-8 animate-fade-in-up delay-200">
+        <p className="max-w-[920px] text-2xl text-slide-gray-100 leading-[1.55]">
+          Research started in <span className="text-slide-gold font-semibold">2014</span> around one core question: how can a facade truly adapt to the environment?
         </p>
 
-        <p className="text-xl text-slide-gray-200 leading-[1.6]">
-          But moving things on buildings for decades without maintenance is extremely challenging. Traditional systems based on electric motors, pulleys, and mechanical joints experience abrasion and wear.
-        </p>
-
-        <div className="space-y-4 mt-8">
-          <h3 className="text-2xl font-semibold text-slide-gold">The Breakthrough</h3>
-          <p className="text-xl text-slide-gray-100 leading-[1.6]">
-            During his PhD at ETH, our CEO Bratislav Svetozarevic developed what is now our <span className="font-semibold">patented soft pneumatic actuator</span> — eliminating rigid moving parts entirely.
-          </p>
+        <div className="space-y-4">
+          {[
+            "Adaptive facades need to move, not just look dynamic.",
+            "Conventional motors, pulleys, and joints wear too quickly for decades-long building use.",
+            "During his PhD at ETH, Bratislav Svetozarevic developed the patented soft pneumatic actuator with no rigid moving parts.",
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-4 rounded-2xl bg-slide-gray-600/80 px-6 py-5">
+              <div className="mt-3 h-3 w-3 shrink-0 rounded-full bg-slide-gold" />
+              <p className="text-xl text-slide-gray-100 leading-[1.55]">{item}</p>
+            </div>
+          ))}
         </div>
 
-        <div className="flex gap-6 mt-6">
+        <div className="grid grid-cols-3 gap-6 pt-2">
           {[
             { num: "8+", label: "Years of R&D" },
             { num: "1", label: "Technical Patent (CH & EU)" },
             { num: "30+", label: "Design Patents" },
           ].map(({ num, label }, i) => (
-            <div key={i} className="flex-1 p-5 bg-slide-gray-600 rounded-xl text-center">
+            <div key={i} className="rounded-2xl bg-slide-gray-600 p-6 text-center">
               <p className="text-3xl font-bold text-slide-gold">{num}</p>
               <p className="text-lg text-slide-gray-200 mt-2 leading-snug">{label}</p>
             </div>
@@ -41,7 +43,7 @@ export const Slide05Research = () => (
         </div>
       </div>
 
-      <div className="w-[500px] h-[600px] rounded-2xl overflow-hidden animate-scale-in delay-300">
+      <div className="h-[640px] rounded-[28px] overflow-hidden animate-scale-in delay-300 shadow-[0_30px_70px_rgba(0,0,0,0.28)]">
         <img src={ethLab} alt="ETH Zurich ZCBS Lab" className="w-full h-full object-cover" />
       </div>
     </div>
