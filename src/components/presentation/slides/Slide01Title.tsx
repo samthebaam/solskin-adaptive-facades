@@ -9,23 +9,23 @@ export const Slide01Title = () => (
       <div className="w-[55%] h-full flex flex-col justify-between p-[80px]">
         <div>
           <img src={solskinLogo} alt="Solskin" className="h-[50px] mb-4" />
-          <p className="text-slide-gold font-display italic text-[22px]">
+          <p className="text-slide-gold font-display italic text-[22px] leading-[1.4]">
             Smart Energy, Sustainable Comfort,<br />
             Architecting an inspiring Future
           </p>
         </div>
 
         <div className="animate-fade-in-up">
-          <h1 className="font-display text-6xl leading-tight mb-6">
+          <h1 className="font-display text-6xl leading-tight mb-8">
             Buildings of<br />
             <span className="text-slide-gold">Tomorrow</span>
           </h1>
-          <p className="text-slide-gray-200 text-xl font-body">
+          <p className="text-slide-gray-200 text-xl font-body mb-2">
             March, 2026
           </p>
-          <div className="mt-4">
-            <p className="text-xl font-semibold">Samuel Bernet</p>
-            <p className="text-slide-gray-300 text-lg">Head of Production</p>
+          <div className="mt-6">
+            <p className="text-2xl font-semibold leading-normal">Samuel Bernet</p>
+            <p className="text-slide-gray-300 text-xl mt-2 leading-normal">Head of Production</p>
           </div>
         </div>
 

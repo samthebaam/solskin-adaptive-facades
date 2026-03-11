@@ -14,8 +14,11 @@ import { Slide08Validation } from "./slides/Slide08Validation";
 import { Slide09Founding } from "./slides/Slide09Founding";
 import { Slide10RealBuildings } from "./slides/Slide10RealBuildings";
 import { Slide11Keller } from "./slides/Slide11Keller";
+import { Slide12Installation } from "./slides/Slide12Installation";
 import { Slide12AI } from "./slides/Slide12AI";
 import { Slide13Flexibility } from "./slides/Slide13Flexibility";
+import { Slide15Competitive } from "./slides/Slide15Competitive";
+import { Slide16HSG } from "./slides/Slide16HSG";
 import { Slide14Closing } from "./slides/Slide14Closing";
 
 const slides = [
@@ -30,8 +33,11 @@ const slides = [
   Slide09Founding,
   Slide10RealBuildings,
   Slide11Keller,
+  Slide12Installation,
   Slide12AI,
   Slide13Flexibility,
+  Slide15Competitive,
+  Slide16HSG,
   Slide14Closing,
 ];
 

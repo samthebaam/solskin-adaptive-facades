@@ -11,7 +11,7 @@ export const Slide02Origin = () => (
         <p className="text-slide-gold font-body text-xl uppercase tracking-[0.3em] mb-6 animate-fade-in">
           The Origin Story
         </p>
-        <h2 className="font-display text-6xl leading-tight mb-12 animate-fade-in-up">
+        <h2 className="font-display text-6xl leading-[1.15] mb-12 animate-fade-in-up">
           What will the buildings<br />
           of tomorrow look like?
         </h2>
@@ -25,7 +25,7 @@ export const Slide02Origin = () => (
           ))}
         </div>
         
-        <p className="text-2xl text-slide-gray-200 mt-10 max-w-[900px] animate-fade-in-up delay-500">
+        <p className="text-2xl text-slide-gray-200 mt-10 max-w-[900px] leading-[1.6] animate-fade-in-up delay-500">
           Very quickly it became clear that <span className="text-slide-gold font-semibold">smart means adaptive</span>. 
           A smart building adapts to the climate, the sun, and the needs of the people inside.
         </p>

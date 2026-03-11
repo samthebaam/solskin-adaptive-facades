@@ -14,7 +14,7 @@ export const Slide08Validation = () => (
       {/* Timeline */}
       <div className="flex items-center gap-0 w-full max-w-[1400px] mb-16 animate-fade-in-up delay-200">
         {[
-          { year: "2013", event: "Research begins at ETH Zurich" },
+          { year: "2014", event: "Research begins at ETH Zurich" },
           { year: "2017", event: "Large-scale demonstrator at EMPA Dübendorf" },
           { year: "2019", event: "Published in Nature Energy" },
           { year: "2021", event: "Zurich Soft Robotics founded" },
@@ -23,7 +23,7 @@ export const Slide08Validation = () => (
             <div className="flex flex-col items-center">
               <div className="w-5 h-5 rounded-full bg-slide-gold z-10" />
               <div className="text-2xl font-bold text-slide-gold mt-4">{year}</div>
-              <p className="text-lg text-slide-gray-200 text-center mt-2 px-4">{event}</p>
+              <p className="text-lg text-slide-gray-200 text-center mt-3 px-4 leading-relaxed">{event}</p>
             </div>
             {i < 3 && (
               <div className="absolute top-[10px] left-[calc(50%+10px)] right-[-50%] h-[2px] bg-slide-gray-400" />
@@ -41,8 +41,8 @@ export const Slide08Validation = () => (
         ].map(({ icon: Icon, title, desc }, i) => (
           <div key={i} className="flex-1 p-8 bg-slide-gray-600 rounded-2xl">
             <Icon size={40} className="text-slide-gold mb-4" />
-            <h3 className="text-2xl font-semibold mb-3">{title}</h3>
-            <p className="text-lg text-slide-gray-200 leading-relaxed">{desc}</p>
+            <h3 className="text-2xl font-semibold mb-3 leading-normal">{title}</h3>
+            <p className="text-xl text-slide-gray-200 leading-[1.6]">{desc}</p>
           </div>
         ))}
       </div>
