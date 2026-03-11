@@ -8,7 +8,7 @@ export const Slide14Closing = () => (
         Our Vision
       </p>
       
-      <h2 className="font-display text-5xl leading-tight mb-12 max-w-[1100px] animate-fade-in-up delay-100">
+      <h2 className="font-display text-5xl leading-[1.2] mb-14 max-w-[1100px] animate-fade-in-up delay-100">
         Fundamentally change how buildings<br />
         <span className="text-slide-gold">interact with their environment</span>
       </h2>
@@ -20,23 +20,23 @@ export const Slide14Closing = () => (
           { label: "More Resilient", desc: "Ready for climate challenges" },
         ].map(({ label, desc }, i) => (
           <div key={i} className="w-[300px] p-8 bg-slide-gray-600 rounded-2xl">
-            <h3 className="text-2xl font-semibold text-slide-gold mb-3">{label}</h3>
-            <p className="text-lg text-slide-gray-200">{desc}</p>
+            <h3 className="text-2xl font-semibold text-slide-gold mb-4 leading-normal">{label}</h3>
+            <p className="text-xl text-slide-gray-200 leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>
 
       <div className="animate-fade-in delay-500">
-        <img src={solskinLogo} alt="Solskin" className="h-[50px] mb-6 mx-auto" />
-        <p className="text-3xl font-display text-slide-gray-100 mb-2">
+        <img src={solskinLogo} alt="Solskin" className="h-[50px] mb-8 mx-auto" />
+        <p className="text-3xl font-display text-slide-gray-100 mb-4 leading-normal">
           Buildings truly ready for the future.
         </p>
-        <p className="text-xl text-slide-gray-300">
+        <p className="text-2xl text-slide-gray-300 leading-normal">
           Thank you.
         </p>
       </div>
 
-      <div className="flex gap-8 mt-10 text-slide-gray-400 text-lg animate-fade-in delay-700">
+      <div className="flex gap-8 mt-12 text-slide-gray-400 text-lg animate-fade-in delay-700">
         <span>solskin.swiss</span>
         <span>•</span>
         <span>Zurich Soft Robotics GmbH</span>

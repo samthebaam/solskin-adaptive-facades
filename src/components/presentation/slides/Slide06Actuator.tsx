@@ -19,15 +19,15 @@ export const Slide06Actuator = () => (
         <div className="flex gap-4">
           <div className="flex-1 p-4 bg-slide-gray-600 rounded-xl text-center">
             <p className="text-slide-gold font-bold text-xl">~90°</p>
-            <p className="text-sm text-slide-gray-200">Vertical movement</p>
+            <p className="text-lg text-slide-gray-200 mt-1 leading-snug">Vertical movement</p>
           </div>
           <div className="flex-1 p-4 bg-slide-gray-600 rounded-xl text-center">
             <p className="text-slide-gold font-bold text-xl">~120°</p>
-            <p className="text-sm text-slide-gray-200">Horizontal movement</p>
+            <p className="text-lg text-slide-gray-200 mt-1 leading-snug">Horizontal movement</p>
           </div>
           <div className="flex-1 p-4 bg-slide-gray-600 rounded-xl text-center">
             <p className="text-slide-gold font-bold text-xl">2-axis</p>
-            <p className="text-sm text-slide-gray-200">Degrees of freedom</p>
+            <p className="text-lg text-slide-gray-200 mt-1 leading-snug">Degrees of freedom</p>
           </div>
         </div>
       </div>
@@ -36,12 +36,12 @@ export const Slide06Actuator = () => (
       <div className="flex-1 space-y-8 animate-fade-in-up delay-300">
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">How it works</h3>
-          <p className="text-xl text-slide-gray-100 leading-relaxed">
+          <p className="text-xl text-slide-gray-100 leading-[1.6]">
             The actuator uses <span className="text-slide-gold font-semibold">rubber bellows</span>. By inflating different chambers with different pressures, the actuator bends and moves the attached solar panel.
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           <h3 className="text-2xl font-semibold">Key advantages</h3>
           {[
             "Very few rigid moving parts",
@@ -53,13 +53,13 @@ export const Slide06Actuator = () => (
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-slide-gold shrink-0" />
-              <span className="text-lg text-slide-gray-100">{item}</span>
+              <span className="text-xl text-slide-gray-100 leading-normal">{item}</span>
             </div>
           ))}
         </div>
 
         <div className="p-5 border border-slide-gold/30 rounded-xl bg-slide-gold/5">
-          <p className="text-xl text-slide-gold font-display italic">
+          <p className="text-xl text-slide-gold font-display italic leading-relaxed">
             The technological breakthrough that made an adaptive facade possible.
           </p>
         </div>
