@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_SUPPLY_CHAIN_PASSWORD_SHA256: ${{ secrets.VITE_SUPPLY_CHAIN_PASSWORD_SHA256 }}
         run: npm run build
 
       - name: Add SPA fallback
