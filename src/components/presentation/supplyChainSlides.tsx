@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import type { ComponentType, ReactNode } from "react";
+import { Fragment, type ComponentType, type ReactNode } from "react";
 import {
   ArrowRight,
   Building2,
@@ -16,8 +16,10 @@ import {
 } from "lucide-react";
 import { SlideLayout } from "./SlideLayout";
 import solskinLogo from "@/assets/slides/solskin-logo.png";
+import ethLab from "@/assets/slides/eth-lab.jpg";
 import installationHero from "@/assets/slides/installation-1.jpg";
 import installationClose from "@/assets/slides/installation-2.jpg";
+import kellerRender from "@/assets/slides/keller-render.jpg";
 import unitDiagram from "@/assets/slides/unit-diagram.jpg";
 import solskinPanels from "@/assets/slides/solskin-panels.jpg";
 import actuatorCloseup from "@/assets/slides/actuator-closeup.jpg";
@@ -39,6 +41,13 @@ const Card = ({ children, className = "" }: { children: ReactNode; className?: s
 const ListItem = ({ children }: { children: ReactNode }) => (
   <li className="flex items-start gap-4 text-[28px] leading-[1.45] text-slide-gray-100">
     <span className="mt-[12px] h-[8px] w-[8px] rounded-full bg-slide-gold" />
+    <span>{children}</span>
+  </li>
+);
+
+const CompactListItem = ({ children }: { children: ReactNode }) => (
+  <li className="flex items-start gap-3 text-[22px] leading-[1.38] text-slide-gray-100">
+    <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
     <span>{children}</span>
   </li>
 );
@@ -113,233 +122,243 @@ const SupplyChainSlide01Title = () => (
 
 const SupplyChainSlide02CoreMessage = () => (
   <SlideLayout>
-    <Eyebrow>Core Message</Eyebrow>
-    <Title className="max-w-[1700px]">
-      We turn facade construction into a <span className="text-slide-gold">shippable product</span>
+    <Eyebrow>Our Evolution</Eyebrow>
+    <Title>
+      From prototype to <span className="text-slide-gold">industrial system</span>
     </Title>
 
-    <p className="mt-6 max-w-[1240px] text-[26px] leading-[1.35] text-slide-gray-200 animate-fade-in delay-200">
-      Shift complexity away from the construction site and into a controlled production environment before the container leaves the factory.
+    <p className="mt-6 max-w-[1260px] text-[27px] leading-[1.38] text-slide-gray-200 animate-fade-in delay-200">
+      This was not a theoretical redesign. Each project exposed the next production bottleneck and forced the model to mature.
     </p>
 
-    <div className="mt-10 grid grid-cols-[1.1fr_100px_1.1fr_100px_1.1fr] items-center gap-5 animate-fade-in-up delay-300">
-      <Card className="h-[300px] p-8">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Traditional delivery</p>
-        <p className="mt-5 text-[34px] leading-[1.15] text-slide-gray-100">Complexity sits on site</p>
-        <ul className="mt-6 space-y-3 text-[22px] leading-[1.35] text-slide-gray-100">
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>10+ suppliers across geographies</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>Interfaces solved during installation</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>QA distributed across the chain</span>
-          </li>
-        </ul>
-      </Card>
-
-      <div className="flex justify-center">
-        <ArrowRight className="h-14 w-14 text-slide-gold" />
-      </div>
-
-      <Card className="h-[300px] border-slide-gold/30 bg-slide-gold/[0.08] p-8">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">Solskin production logic</p>
-        <p className="mt-5 text-[34px] leading-[1.15] text-slide-gray-100">Complexity moves into the factory</p>
-        <ul className="mt-6 space-y-3 text-[22px] leading-[1.35] text-slide-gray-100">
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>System-level pre-resolution</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>Containerized kitting</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>Single controlled system boundary</span>
-          </li>
-        </ul>
-      </Card>
-
-      <div className="flex justify-center">
-        <ArrowRight className="h-14 w-14 text-slide-gold" />
-      </div>
-
-      <Card className="h-[300px] p-8">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Local spoke outcome</p>
-        <p className="mt-5 text-[34px] leading-[1.15] text-slide-gray-100">Fast final assembly + installation</p>
-        <ul className="mt-6 space-y-3 text-[22px] leading-[1.35] text-slide-gray-100">
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>Lower on-site uncertainty</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>Fewer coordination points</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="mt-[10px] h-[7px] w-[7px] rounded-full bg-slide-gold" />
-            <span>More repeatable deployment globally</span>
-          </li>
-        </ul>
-      </Card>
+    <div className="mt-12 grid grid-cols-[1fr_90px_1fr_90px_1fr] items-center gap-5 animate-fade-in-up delay-300">
+      {[
+        {
+          phase: "Phase 1",
+          title: "Manual Assembly",
+          context: "ETH / Schenkel",
+          bullets: ["Full system assembled in-house", "High flexibility", "Low scalability"],
+        },
+        {
+          phase: "Phase 2",
+          title: "Partial Industrialization",
+          context: "KELLER",
+          bullets: ["Actuator testing rig", "Supplier-level quality checks", "Distributed production"],
+        },
+        {
+          phase: "Phase 3",
+          title: "Industrial System",
+          context: "REMNEX",
+          bullets: ["Centralized production hub", "Containerized KIT delivery", "Standardized global assembly"],
+        },
+      ].map((item, index) => (
+        <Fragment key={item.phase}>
+          <Card className={`h-[360px] p-8 ${index === 2 ? "border-slide-gold/30 bg-slide-gold/[0.08]" : ""}`}>
+            <p className={`text-[18px] uppercase tracking-[0.22em] ${index === 2 ? "text-slide-gold-light" : "text-slide-gray-300"}`}>
+              {item.phase}
+            </p>
+            <p className="mt-4 text-[36px] font-semibold leading-[1.12] text-slide-gray-100">{item.title}</p>
+            <p className="mt-3 text-[24px] text-slide-gold">{item.context}</p>
+            <ul className="mt-8 space-y-4">
+              {item.bullets.map((bullet) => (
+                <CompactListItem key={bullet}>{bullet}</CompactListItem>
+              ))}
+            </ul>
+          </Card>
+          {index < 2 ? (
+            <div className="flex justify-center">
+              <ArrowRight className="h-14 w-14 text-slide-gold" />
+            </div>
+          ) : null}
+        </Fragment>
+      ))}
     </div>
 
     <div className="mt-10 flex items-center justify-between rounded-[24px] border border-white/10 bg-white/[0.03] px-8 py-5 text-[24px] text-slide-gray-200 animate-fade-in delay-400">
-      <p>Key execution principle: solve uncertainty before the container leaves the factory.</p>
-      <Tag>Factory-resolved, site-assembled</Tag>
+      <p>The solution became inevitable because the operating model kept revealing the same constraint: interfaces.</p>
+      <Tag>Evolution, not theory</Tag>
     </div>
   </SlideLayout>
 );
 
 const SupplyChainSlide03Problem = () => (
-  <SlideLayout>
-    <Eyebrow>Industry Reality</Eyebrow>
-    <Title>
-      Facade delivery is still a <span className="text-slide-gold">fragmented risk stack</span>
-    </Title>
-
-    <div className="mt-14 grid grid-cols-[0.95fr_1.05fr] gap-10">
-      <div className="grid grid-cols-2 gap-6 animate-fade-in-up delay-200">
-        {[
-          { label: "10+ suppliers", body: "Structure, panels, actuators, controls, fixings, logistics, installation and QA are split across companies." },
-          { label: "Distributed QA", body: "Each supplier validates its own piece, but nobody owns the full system until site." },
-          { label: "Interface-heavy", body: "Tolerance, sequencing and information gaps accumulate between every handoff." },
-          { label: "Site = integration point", body: "The highest-risk activity happens in the least controlled environment." },
-        ].map((item) => (
-          <Card key={item.label} className="min-h-[255px] p-8">
-            <p className="text-[18px] uppercase tracking-[0.2em] text-slide-gray-300">{item.label}</p>
-            <p className="mt-5 text-[32px] leading-[1.25] text-slide-gray-100">{item.body}</p>
+  <SlideLayout noPadding>
+    <div className="grid h-full w-full grid-cols-[0.88fr_1.12fr]">
+      <div className="relative overflow-hidden">
+        <img src={ethLab} alt="ETH prototype facade" className="h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slide-bg/18 to-slide-bg" />
+        <div className="absolute bottom-[70px] left-[60px] right-[60px]">
+          <Card className="max-w-[520px] p-7 shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
+            <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">ETH / Schenkel</p>
+            <p className="mt-3 text-[28px] leading-[1.3] text-slide-gray-100">
+              Full system integration happened internally, with engineering directly embedded in assembly.
+            </p>
           </Card>
-        ))}
+        </div>
       </div>
 
-      <Card className="relative overflow-hidden p-10 animate-scale-in delay-300">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(210,161,86,0.16),transparent_60%)]" />
-        <p className="relative text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Where risk accumulates</p>
-
-        <div className="relative mt-10 flex h-[520px] items-center justify-center">
-          <div className="absolute left-[80px] top-[58px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Panel supplier
-          </div>
-          <div className="absolute right-[72px] top-[76px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Metal shop
-          </div>
-          <div className="absolute left-[34px] bottom-[156px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Actuators
-          </div>
-          <div className="absolute right-[44px] bottom-[172px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Controls
-          </div>
-          <div className="absolute left-[182px] bottom-[56px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Logistics
-          </div>
-          <div className="absolute right-[160px] bottom-[46px] rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-[22px] text-slide-gray-100">
-            Installer
-          </div>
-
-          <div className="absolute inset-0">
-            {[
-              "left-[265px] top-[110px] w-[370px] rotate-[22deg]",
-              "right-[255px] top-[118px] w-[360px] -rotate-[22deg]",
-              "left-[180px] bottom-[245px] w-[390px] -rotate-[10deg]",
-              "right-[160px] bottom-[245px] w-[390px] rotate-[8deg]",
-              "left-[320px] bottom-[140px] w-[220px] rotate-[68deg]",
-              "right-[300px] bottom-[140px] w-[220px] -rotate-[66deg]",
-            ].map((line) => (
-              <div key={line} className={`absolute h-px bg-gradient-to-r from-transparent via-white/25 to-transparent ${line}`} />
-            ))}
-          </div>
-
-          <div className="relative z-10 flex h-[260px] w-[260px] items-center justify-center rounded-full border border-rose-400/30 bg-rose-500/10 text-center shadow-[0_0_100px_rgba(244,63,94,0.15)]">
-            <div>
-              <p className="text-[20px] uppercase tracking-[0.22em] text-rose-200">Site</p>
-              <p className="mt-4 text-[44px] leading-[1.15] text-slide-gray-100">Integration
-                <br />
-                point
-              </p>
-            </div>
-          </div>
+      <div className="flex flex-col justify-between p-[80px]">
+        <div>
+          <Eyebrow>Phase 1</Eyebrow>
+          <Title>
+            Manual <span className="text-slide-gold">Assembly</span>
+          </Title>
+          <p className="mt-6 text-[33px] leading-[1.28] text-slide-gray-100">Full control, low scalability</p>
         </div>
-      </Card>
-    </div>
 
-    <p className="mt-10 text-[34px] leading-[1.35] text-slide-gray-100 animate-fade-in-up delay-500">
-      Result: delays, rework, cost overruns and quality escapes typically emerge where responsibility changes hands.
-    </p>
+        <Card className="p-8 animate-fade-in-up delay-200">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">What worked</p>
+          <ul className="mt-6 space-y-4">
+            <CompactListItem>Assembly done internally at ETH / Schenkel</CompactListItem>
+            <CompactListItem>Direct integration of all components</CompactListItem>
+            <CompactListItem>High engineering involvement and rapid learning</CompactListItem>
+          </ul>
+        </Card>
+
+        <Card className="p-8 animate-fade-in-up delay-300">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">Limitations</p>
+          <ul className="mt-6 space-y-4">
+            <CompactListItem>Not scalable beyond individual projects</CompactListItem>
+            <CompactListItem>High labor intensity</CompactListItem>
+            <CompactListItem>Not yet repeatable across installations</CompactListItem>
+          </ul>
+        </Card>
+
+        <p className="animate-fade-in-up delay-400 text-[34px] leading-[1.3] text-slide-gold font-display italic">
+          “We proved the system works, but not at scale.”
+        </p>
+      </div>
+    </div>
   </SlideLayout>
 );
 
 const SupplyChainSlide04Insight = () => (
-  <SlideLayout>
-    <Eyebrow>Key Insight</Eyebrow>
-    <Title>
-      The problem is not components. It is <span className="text-slide-gold">interfaces.</span>
-    </Title>
-
-    <div className="mt-16 grid grid-cols-[0.9fr_1.1fr] gap-10">
-      <Card className="p-10 animate-fade-in-up delay-200">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Where failures occur</p>
-        <div className="mt-10 space-y-8">
-          {[
-            { title: "Between suppliers", desc: "Tolerances, incomplete documentation and ownership gaps." },
-            { title: "During installation", desc: "Sequence changes, missing parts and low-fidelity problem solving." },
-            { title: "At system integration", desc: "Mechanical, electrical and controls interfaces only validated late." },
-          ].map((item) => (
-            <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/[0.03] p-7">
-              <p className="text-[28px] font-semibold text-slide-gray-100">{item.title}</p>
-              <p className="mt-3 text-[24px] leading-[1.45] text-slide-gray-200">{item.desc}</p>
-            </div>
-          ))}
+  <SlideLayout noPadding>
+    <div className="grid h-full w-full grid-cols-[1.08fr_0.92fr]">
+      <div className="flex flex-col justify-between p-[80px]">
+        <div>
+          <Eyebrow>Phase 2</Eyebrow>
+          <Title className="max-w-[900px]">
+            Partial Industrialization <span className="text-slide-gold">(KELLER)</span>
+          </Title>
+          <p className="mt-6 text-[33px] leading-[1.28] text-slide-gray-100">First step toward structure</p>
         </div>
-      </Card>
 
-      <Card className="p-10 animate-scale-in delay-300">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Design response</p>
-        <div className="mt-12 flex h-[500px] items-center justify-between gap-6">
-          {[
-            { title: "Optimize parts", tone: "text-slide-gray-300", fill: "bg-white/[0.04]" },
-            { title: "Reduce interfaces", tone: "text-slide-gray-100", fill: "bg-slide-gold/15 border-slide-gold/30" },
-            { title: "Control handoff", tone: "text-slide-gray-300", fill: "bg-white/[0.04]" },
-          ].map((item, index) => (
-            <div key={item.title} className="flex flex-1 flex-col items-center">
-              <div className={`flex h-[370px] w-full items-center justify-center rounded-[28px] border border-white/10 ${item.fill}`}>
-                <p className={`max-w-[220px] text-center text-[42px] leading-[1.15] ${item.tone}`}>{item.title}</p>
-              </div>
-              {index < 2 ? <MoveRight className="mt-8 h-12 w-12 text-slide-gold" /> : null}
-            </div>
-          ))}
+        <Card className="p-8 animate-fade-in-up delay-200">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">What changed</p>
+          <ul className="mt-6 space-y-4">
+            <CompactListItem>Introduced actuator testing rig</CompactListItem>
+            <CompactListItem>Defined QA at supplier level</CompactListItem>
+            <CompactListItem>Distributed supply chain and project-based coordination</CompactListItem>
+          </ul>
+        </Card>
+
+        <Card className="p-8 animate-fade-in-up delay-300">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Suppliers across</p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            {["Serbia", "Germany", "Austria", "Switzerland", "China"].map((country) => (
+              <Tag key={country}>{country}</Tag>
+            ))}
+          </div>
+          <p className="mt-6 text-[24px] leading-[1.4] text-slide-gray-200">
+            Production became more structured, but integration and ownership were still distributed across the chain.
+          </p>
+        </Card>
+      </div>
+
+      <div className="relative overflow-hidden">
+        <img src={kellerRender} alt="KELLER building render" className="h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-slide-bg/10 to-slide-bg" />
+        <div className="absolute bottom-[72px] left-[52px] right-[52px]">
+          <Card className="p-7 shadow-[0_24px_60px_rgba(0,0,0,0.35)]">
+            <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">KELLER was the turning point</p>
+            <p className="mt-3 text-[28px] leading-[1.3] text-slide-gray-100">
+              Working components existed, but the production model still depended on too many suppliers and interfaces.
+            </p>
+          </Card>
         </div>
-        <p className="mt-8 text-[30px] leading-[1.35] text-slide-gray-100">
-          Goal: remove coordination points before they become site problems.
-        </p>
-      </Card>
+      </div>
     </div>
   </SlideLayout>
 );
 
 const SupplyChainSlide05Approach = () => (
   <SlideLayout>
-    <Eyebrow>Our Approach</Eyebrow>
+    <Eyebrow>KELLER Turning Point</Eyebrow>
     <Title>
-      Container <span className="text-slide-gold">-&gt;</span> Spoke production model
+      Coordination became the <span className="text-slide-gold">bottleneck</span>
     </Title>
 
-    <div className="mt-16 grid grid-cols-[0.95fr_0.22fr_0.95fr_0.22fr_0.95fr] items-center gap-6 animate-fade-in-up delay-200">
-      <Card className="h-[500px] p-8">
+    <div className="mt-14 grid grid-cols-[0.96fr_1.04fr] gap-8">
+      <div className="relative pl-12 animate-fade-in-up delay-200">
+        <div className="absolute left-[18px] top-[12px] bottom-[12px] w-px bg-gradient-to-b from-slide-gold/40 via-white/10 to-white/5" />
+        {[
+          "Multiple suppliers created complex interfaces.",
+          "Integration effort shifted to site.",
+          "Coordination overhead increased sharply.",
+          "Risk of mismatches, delays and rework rose with every handoff.",
+        ].map((step, index) => (
+          <div key={step} className="relative mb-6 last:mb-0">
+            <div className="absolute -left-[48px] top-[26px] flex h-8 w-8 items-center justify-center rounded-full border border-slide-gold/40 bg-slide-gold/10 text-[15px] font-semibold text-slide-gold">
+              {index + 1}
+            </div>
+            <Card className="p-7">
+              <p className="text-[29px] leading-[1.34] text-slide-gray-100">{step}</p>
+            </Card>
+          </div>
+        ))}
+      </div>
+
+      <div className="space-y-6 animate-scale-in delay-300">
+        <Card className="p-8">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">What we learned</p>
+          <p className="mt-5 text-[40px] leading-[1.16] text-slide-gray-100">
+            Production worked, but <span className="text-slide-gold">integration was the problem.</span>
+          </p>
+        </Card>
+
+        <Card className="border-slide-gold/30 bg-slide-gold/[0.08] p-8">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">Key insight</p>
+          <p className="mt-5 text-[40px] leading-[1.16] text-slide-gray-100">
+            We didn’t need better suppliers. We needed fewer interfaces.
+          </p>
+        </Card>
+
+        <Card className="p-8">
+          <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gray-300">Next question</p>
+          <p className="mt-5 text-[31px] leading-[1.35] text-slide-gray-100">
+            How do we remove interfaces entirely, instead of managing them more carefully?
+          </p>
+        </Card>
+      </div>
+    </div>
+  </SlideLayout>
+);
+
+const SupplyChainSlide06FullIndustrialization = () => (
+  <SlideLayout>
+    <Eyebrow>Phase 3</Eyebrow>
+    <Title>
+      Full Industrialization <span className="text-slide-gold">(REMNEX)</span>
+    </Title>
+
+    <p className="mt-6 max-w-[1160px] text-[28px] leading-[1.38] text-slide-gray-200 animate-fade-in delay-200">
+      Next step: Hub -&gt; Container -&gt; Spoke. Remove interfaces by moving coordination and system resolution upstream into the factory.
+    </p>
+
+    <div className="mt-14 grid grid-cols-[0.95fr_0.22fr_0.95fr_0.22fr_0.95fr] items-center gap-6 animate-fade-in-up delay-300">
+      <Card className="h-[460px] p-8">
         <div className="flex items-center gap-4">
           <Factory className="h-11 w-11 text-slide-gold" />
-          <p className="text-[32px] font-semibold text-slide-gray-100">Central hub</p>
+          <p className="text-[32px] font-semibold text-slide-gray-100">Hub</p>
         </div>
-        <p className="mt-6 text-[24px] leading-[1.45] text-slide-gray-200">China-based sourcing, production, preassembly, QA and kitting.</p>
-        <div className="mt-8 space-y-4">
-          <Tag>ERP-driven BOM</Tag>
+        <p className="mt-6 text-[25px] leading-[1.42] text-slide-gray-200">
+          Centralized production, sourcing, QA and preassembly in one operating center.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Tag>Centralized production</Tag>
           <Tag tone="muted">System-level QA</Tag>
-          <Tag tone="muted">Single source package</Tag>
+          <Tag tone="muted">Single ownership zone</Tag>
         </div>
       </Card>
 
@@ -347,13 +366,13 @@ const SupplyChainSlide05Approach = () => (
         <Ship className="h-16 w-16 text-slide-gold" />
       </div>
 
-      <Card className="h-[500px] border-slide-gold/30 bg-slide-gold/[0.08] p-8">
-        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">Containerized delivery</p>
-        <p className="mt-6 text-[40px] leading-[1.18] text-slide-gray-100">KIT ships as a resolved system</p>
-        <ul className="mt-8 space-y-5">
-          <ListItem>Precut tubes and cables</ListItem>
-          <ListItem>Preassembled actuators</ListItem>
-          <ListItem>Modules, manifolds and frame components</ListItem>
+      <Card className="h-[460px] border-slide-gold/30 bg-slide-gold/[0.08] p-8">
+        <p className="text-[18px] uppercase tracking-[0.22em] text-slide-gold-light">Container</p>
+        <p className="mt-6 text-[38px] leading-[1.15] text-slide-gray-100">Pre-resolved system (KIT)</p>
+        <ul className="mt-8 space-y-4">
+          <CompactListItem>Containerized delivery of coordinated components</CompactListItem>
+          <CompactListItem>Precut, preassembled and install-sequenced parts</CompactListItem>
+          <CompactListItem>System arrives resolved except for building interface</CompactListItem>
         </ul>
       </Card>
 
@@ -361,23 +380,25 @@ const SupplyChainSlide05Approach = () => (
         <Hammer className="h-16 w-16 text-slide-gold" />
       </div>
 
-      <Card className="h-[500px] p-8">
+      <Card className="h-[460px] p-8">
         <div className="flex items-center gap-4">
           <Building2 className="h-11 w-11 text-slide-gold" />
-          <p className="text-[32px] font-semibold text-slide-gray-100">Local spoke</p>
+          <p className="text-[32px] font-semibold text-slide-gray-100">Spoke</p>
         </div>
-        <p className="mt-6 text-[24px] leading-[1.45] text-slide-gray-200">Final assembly, building interface and installation handled close to the project.</p>
-        <div className="mt-8 space-y-4">
-          <Tag tone="muted">Anchors stay local</Tag>
-          <Tag tone="muted">Standard fasteners local</Tag>
-          <Tag>Controlled handoff to site</Tag>
+        <p className="mt-6 text-[25px] leading-[1.42] text-slide-gray-200">
+          Local standardized assembly and installation, with only project-specific building interfaces handled on site.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Tag tone="muted">Local standardized assembly</Tag>
+          <Tag tone="muted">Building anchors stay local</Tag>
+          <Tag>Repeatable global deployment</Tag>
         </div>
       </Card>
     </div>
 
     <div className="mt-10 flex items-center justify-between rounded-[28px] border border-white/10 bg-white/[0.03] px-10 py-7 animate-fade-in delay-400">
-      <p className="text-[30px] leading-[1.35] text-slide-gray-100">Only one interface remains project-specific: the connection to the building.</p>
-      <Tag>One controlled system boundary</Tag>
+      <p className="text-[30px] leading-[1.35] text-slide-gray-100">Complexity moved from site to factory.</p>
+      <Tag>Hub -&gt; Container -&gt; Spoke</Tag>
     </div>
   </SlideLayout>
 );
@@ -840,6 +861,7 @@ export const supplyChainSlides: ComponentType[] = [
   SupplyChainSlide03Problem,
   SupplyChainSlide04Insight,
   SupplyChainSlide05Approach,
+  SupplyChainSlide06FullIndustrialization,
   SupplyChainSlide06Unit,
   SupplyChainSlide07Kit,
   SupplyChainSlide08Process,
